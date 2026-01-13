@@ -1,0 +1,21 @@
+﻿{
+  "name": "mern-dynamodb-starter",
+  "version": "1.0.0",
+  "description": "Full stack task manager with React, Node.js, and DynamoDB",
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "setup": "npm run install-all && cd server && node createTable.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "start": "npm run dev",
+    "create-table": "cd server && node createTable.js",
+    "seed": "cd server && node seedData.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "keywords": ["react", "node", "dynamodb", "mern"],
+  "author": "",
+  "license": "MIT"
+}
